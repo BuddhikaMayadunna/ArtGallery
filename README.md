@@ -12,10 +12,14 @@ It allows to perform some basic functionalities to perform in a system, register
 ## Resources used
 * A relational database on SQL server to store data
 * Http client factory to call ArtGallery APIs
+* Change default connetion in the appsetting.json according to your environment.
 
 
 ## Available APIs
 | Url            | Operation                              |    Usage       | Response                                                                                      
 | ------------------- | --------------------------------- | ----------------------------------- | -----------------------------------     
-| /users/create         | GET              | Retrieve 5 users from the random user API and save in the Inmemory datastore   | Users created : Returns 201 Created with message, 400 Bad Request returns when something goes wrong, 500 Internal server error if its my fault                                      
-| /users/get        | GET                             | Retrieve all users from the datastore |  Returns 200 OK with user array, 500 Internal server error if its my fault   
+| /api/Auth/register         | POST              | Register user.   | Users created : Returns 201 Created with message, 400 Bad Request returns when something goes wrong, 500 Internal server error if its my fault                                      
+| /api/Auth/login        | PSOT                             | Login user |  Returns 200 OK with user array, 500 Internal server error if its my fault   
+| /api/Post/Get        | GET                             | Get all posts |  Returns 200 OK with user array, 500 Internal server error if its my fault   
+| /api/Post/Create        | POST                             | Create new post |  Returns 200 OK with user array, 500 Internal server error if its my fault
+| /api/Post/Update        | PUT                             | Update individual posts |  Returns 200 OK with user array, 500 Internal server error if its my fault
